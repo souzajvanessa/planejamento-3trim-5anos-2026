@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planejamento 3º Trimestre — Inglês | 5º Ano | Linus Pauling 2026</title>
+<style>
+/* ═══════════════════════════════════════════════════════
+   VARIABLES
+═══════════════════════════════════════════════════════ */
+:root {
+  --burg:       #7B1C2E;
+  --burg-dark:  #5A1420;
+  --burg-light: #F9E8EC;
+  --must:       #C9A227;
+  --must-dark:  #A07E1C;
+  --must-light: #FDF3CF;
+  --u5:         #1565C0;
+  --u5-bg:      #EBF5FB;
+  --u6:         #2E7D32;
+  --u6-bg:      #E8F5E9;
+  --sc:         #BF360C;
+  --sc-bg:      #FFF3E0;
+  --rev:        #4A148C;
+  --rev-bg:     #F3E5F5;
+  --pv:         #B71C1C;
+  --pv-bg:      #FFEBEE;
+  --ri:         #E65100;
+  --ri-bg:      #FFF8E1;
+  /* light theme defaults */
+  --bg:         #FDF8EE;
+  --surface:    #FFFFFF;
+  --surface2:   #F7F2E8;
+  --text:       #1A1A1A;
+  --text2:      #5A4A3A;
+  --border:     #DDD0AA;
+  --shadow:     rgba(123,28,46,.10);
+  --hdr-bg:     #7B1C2E;
+  --hdr-text:   #FFFFFF;
+  --cal-today:  #C9A227;
+  --scrollbar:  #C9A227;
+  --radius:     12px;
+  --radius-sm:  8px;
+  --gap:        16px;
+}
+[data-theme="dark"] {
+  --bg:         #130A0D;
+  --surface:    #231118;
+  --surface2:   #2E1820;
+  --text:       #F5EDD8;
+  --text2:      #C8B8A0;
+  --border:     #4A2830;
+  --shadow:     rgba(0,0,0,.40);
+  --hdr-bg:     #2A0E1A;
+  --hdr-text:   #F5EDD8;
+  --must-light: #3A2E0A;
+  --burg-light: #2A0E1A;
+  --u5-bg:      #0A1E3A;
+  --u6-bg:      #0A2010;
+  --sc-bg:      #2E1200;
+  --rev-bg:     #1A0830;
+  --pv-bg:      #2A0808;
+  --ri-bg:      #2A1400;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  font-size:14px;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  transition:background .3s,color .3s;
+}
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:4px}
+a{color:var(--must);text-decoration:none}
+textarea,input{font-family:inherit;font-size:13px}
+
+/* ═══════════════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════════════ */
+#appHeader{
+  position:sticky;top:0;z-index:100;
+  background:var(--hdr-bg);
+  color:var(--hdr-text);
+  box-shadow:0 2px 10px var(--shadow);
+}
+.hdr-main{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;gap:12px;
+}
+.hdr-left{display:flex;align-items:center;gap:12px}
+.hdr-logo{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--must);color:var(--burg-dark);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:18px;flex-shrink:0;
+}
+.hdr-title{line-height:1.2}
+.hdr-school{font-size:15px;font-weight:700;letter-spacing:.3px}
+.hdr-sub{font-size:12px;opacity:.85}
+.hdr-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+
+/* ═══════════════════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════════════════ */
+.btn-pill{
+  padding:7px 16px;border-radius:20px;border:2px solid var(--must);
+  background:transparent;color:var(--hdr-text);cursor:pointer;
+  font-size:12px;font-weight:600;transition:.2s;white-space:nowrap;
+}
+.btn-pill:hover{background:var(--must);color:var(--burg-dark)}
+.btn-pill.active{background:var(--must);color:var(--burg-dark)}
+.btn-icon{
+  width:38px;height:38px;border-radius:50%;border:2px solid var(--must);
+  background:transparent;color:var(--hdr-text);cursor:pointer;
+  font-size:16px;display:flex;align-items:center;justify-content:center;
+  transition:.2s;
+}
+.btn-icon:hover{background:var(--must);color:var(--burg-dark)}
+
+/* Filter chips */
+.filter-bar{
+  display:flex;flex-wrap:wrap;gap:8px;
+  padding:10px 20px;border-top:1px solid rgba(255,255,255,.15);
+  background:rgba(0,0,0,.15);
+}
+.filter-chip{
+  padding:5px 14px;border-radius:16px;border:1.5px solid rgba(255,255,255,.4);
+  background:transparent;color:var(--hdr-text);cursor:pointer;font-size:12px;
+  transition:.2s;
+}
+.filter-chip:hover{border-color:var(--must);color:var(--must)}
+.filter-chip.active{background:var(--must);border-color:var(--must);color:var(--burg-dark);font-weight:700}
+.hidden{display:none!important}
+
+/* ═══════════════════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════════════════ */
+.layout{
+  display:flex;align-items:flex-start;gap:0;
+  max-width:1400px;margin:0 auto;padding:20px var(--gap);
+}
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE
+═══════════════════════════════════════════════════════ */
+@media(max-width:900px){
+  .layout{flex-direction:column;padding:12px 10px}
+
+  /* Header */
+  .hdr-main{flex-wrap:wrap;padding:10px 12px;gap:8px}
+  .hdr-school{font-size:13px}
+  .hdr-sub{font-size:11px}
+  .hdr-right{gap:6px;flex-wrap:wrap}
+  .btn-pill{padding:5px 10px;font-size:11px}
+  .btn-icon{width:32px;height:32px;font-size:14px}
+  .filter-bar{padding:8px 12px;gap:6px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .filter-chip{white-space:nowrap;flex-shrink:0}
+
+  /* Calendar sidebar → collapsible panel on top */
+  .cal-sidebar{
+    width:100%;position:static;max-height:none;
+    padding-right:0;margin-bottom:16px;
+  }
+  .cal-sidebar-inner{display:none}
+  .cal-sidebar-inner.open{display:block}
+  .cal-toggle-btn{
+    width:100%;padding:10px 16px;border-radius:var(--radius);
+    background:var(--burg);color:#fff;border:none;cursor:pointer;
+    font-size:13px;font-weight:700;text-align:left;
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:8px;
+  }
+  [data-theme="dark"] .cal-toggle-btn{background:var(--surface2);color:var(--must)}
+  .cal-toggle-arrow{transition:.3s}
+  .cal-toggle-btn.open .cal-toggle-arrow{transform:rotate(180deg)}
+
+  /* Calendar grid — slightly smaller on mobile */
+  .cal-day{font-size:10px;padding:3px 1px;min-height:24px}
+  .cal-dow{font-size:8px;padding:3px 1px}
+
+  /* Show only current + next month on mobile to save space */
+  .cal-month{margin-bottom:12px}
+
+  /* Stats bar */
+  .stats-bar{gap:8px}
+  .stat-card{min-width:70px;padding:8px 10px}
+  .stat-num{font-size:18px}
+  .stat-label{font-size:10px}
+
+  /* Lesson cards */
+  .card-header{padding:10px 12px;gap:8px}
+  .card-num{font-size:10px;padding:2px 8px}
+  .card-date{font-size:13px}
+  .card-body{padding:0 12px 12px}
+
+  /* Fields table → stack on small screens */
+  .fields-table,.fields-table tbody,.fields-table tr,.fields-table td{
+    display:block;width:100%;
+  }
+  .field-label{
+    padding:8px 0 2px;border-bottom:none!important;
+    font-size:11px;width:auto;
+  }
+  .field-value{padding:0 0 8px}
+
+  /* Eval row */
+  .eval-row{gap:6px}
+  .eval-toggle{padding:4px 10px;font-size:11px}
+
+  /* Class tabs */
+  .tab-btn{padding:5px 10px;font-size:11px}
+
+  /* Obs textarea */
+  .obs-textarea{min-height:60px;font-size:12px}
+
+  /* Section banner */
+  .section-banner{padding:10px 14px;gap:8px}
+  .section-banner-title{font-size:13px}
+  .section-banner-sub{font-size:11px}
+  .section-banner-count{font-size:10px;padding:3px 8px}
+}
+
+/* ═══════════════════════════════════════════════════════
+   CALENDAR SIDEBAR
+═══════════════════════════════════════════════════════ */
+.cal-sidebar{
+  width:280px;flex-shrink:0;
+  position:sticky;top:80px;
+  max-height:calc(100vh - 100px);overflow-y:auto;
+  padding-right:16px;
+}
+.cal-sidebar-title{
+  font-size:13px;font-weight:700;color:var(--burg);
+  text-transform:uppercase;letter-spacing:.8px;
+  padding:8px 0 12px;border-bottom:2px solid var(--must);
+  margin-bottom:16px;
+}
+[data-theme="dark"] .cal-sidebar-title{color:var(--must)}
+
+/* Monthly mini calendar */
+.cal-month{margin-bottom:20px}
+.cal-month-name{
+  font-size:12px;font-weight:700;color:var(--burg);
+  text-align:center;padding:6px 0;
+  background:var(--burg-light);border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  text-transform:uppercase;letter-spacing:.5px;
+}
+[data-theme="dark"] .cal-month-name{color:var(--must)}
+.cal-grid{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  border:1px solid var(--border);
+  border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);
+  overflow:hidden;background:var(--surface);
+}
+.cal-dow{
+  font-size:9px;font-weight:700;text-align:center;
+  padding:4px 2px;background:var(--surface2);color:var(--text2);
+  text-transform:uppercase;
+}
+.cal-day{
+  font-size:11px;text-align:center;padding:4px 2px;
+  position:relative;min-height:28px;cursor:default;
+  color:var(--text2);
+  border-top:1px solid var(--border);
+}
+.cal-day.has-lesson{
+  color:var(--text);font-weight:700;cursor:pointer;
+  transition:.15s;
+}
+.cal-day.has-lesson:hover{background:var(--must-light)}
+.cal-day.highlighted{
+  background:var(--must);color:var(--burg-dark)!important;
+  border-radius:6px;
+}
+.lesson-dot{
+  width:5px;height:5px;border-radius:50%;
+  display:inline-block;margin:1px 1px 0;
+}
+.dot-u5{background:var(--u5)}
+.dot-u6{background:var(--u6)}
+.dot-sc{background:var(--sc)}
+.dot-rev{background:var(--rev)}
+.dot-pv{background:var(--pv)}
+.dot-ri{background:var(--ri)}
+.cal-dots{line-height:1}
+
+/* Legend */
+.legend{
+  margin-top:16px;padding:12px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+}
+.legend-title{
+  font-size:11px;font-weight:700;text-transform:uppercase;
+  color:var(--text2);margin-bottom:8px;
+}
+.legend-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;margin-bottom:5px;color:var(--text);
+}
+.legend-dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MAIN PLANNER AREA
+═══════════════════════════════════════════════════════ */
+.planner-main{flex:1;min-width:0}
+
+/* Section banners */
+.section-banner{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 20px;border-radius:var(--radius);
+  margin-bottom:12px;margin-top:24px;
+}
+.section-banner:first-child{margin-top:0}
+.section-banner-icon{font-size:20px}
+.section-banner-text{flex:1}
+.section-banner-label{font-size:11px;font-weight:600;opacity:.85;text-transform:uppercase;letter-spacing:.6px}
+.section-banner-title{font-size:15px;font-weight:700;line-height:1.2}
+.section-banner-sub{font-size:12px;opacity:.8;margin-top:2px}
+.section-banner-count{
+  font-size:11px;font-weight:700;
+  background:rgba(255,255,255,.25);
+  padding:4px 10px;border-radius:12px;flex-shrink:0;
+}
+
+/* Lesson card */
+.lesson-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  margin-bottom:10px;
+  overflow:hidden;
+  box-shadow:0 2px 6px var(--shadow);
+  transition:box-shadow .2s,transform .15s;
+}
+.lesson-card:hover{box-shadow:0 4px 14px var(--shadow)}
+.lesson-card.filtered-out{display:none}
+
+/* Card header (toggle) */
+.card-header{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px;cursor:pointer;
+  user-select:none;
+  border-bottom:2px solid transparent;
+  transition:.2s;
+}
+.card-header:hover{opacity:.92}
+.card-num{
+  font-size:11px;font-weight:800;
+  padding:3px 10px;border-radius:12px;
+  color:#fff;flex-shrink:0;
+}
+.card-title{flex:1}
+.card-week{font-size:11px;font-weight:600;opacity:.75;margin-bottom:1px}
+.card-date{font-size:14px;font-weight:700}
+.card-day{font-size:11px;opacity:.7}
+.card-eval-badge{
+  font-size:10px;font-weight:700;
+  padding:3px 10px;border-radius:10px;
+  flex-shrink:0;
+}
+.card-toggle{
+  width:28px;height:28px;border-radius:50%;
+  border:2px solid currentColor;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;transition:.3s;flex-shrink:0;
+}
+.card-header.open .card-toggle{transform:rotate(180deg)}
+
+/* Card body */
+.card-body{
+  display:none;padding:0 16px 16px;
+  border-top:1px solid var(--border);
+}
+.card-body.open{display:block}
+
+/* Fields table */
+.fields-table{
+  width:100%;border-collapse:collapse;margin-top:12px;
+}
+.fields-table tr:not(:last-child) td{
+  border-bottom:1px solid var(--border);
+}
+.field-label{
+  font-size:12px;font-weight:700;
+  padding:8px 12px 8px 0;
+  color:var(--text2);
+  white-space:nowrap;vertical-align:top;
+  width:160px;
+}
+.field-value{
+  font-size:13px;padding:8px 0;
+  color:var(--text);vertical-align:top;
+  line-height:1.6;
+}
+
+/* Evaluation row */
+.eval-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.eval-toggle{
+  display:flex;align-items:center;gap:6px;
+  padding:5px 14px;border-radius:16px;
+  border:2px solid var(--border);
+  cursor:pointer;font-size:12px;font-weight:600;
+  transition:.2s;color:var(--text2);
+  background:transparent;
+}
+.eval-toggle input[type="radio"]{display:none}
+.eval-toggle.selected-none{border-color:var(--burg);color:var(--burg);background:var(--burg-light)}
+.eval-toggle.selected-test{border-color:var(--pv);color:var(--pv);background:var(--pv-bg)}
+.eval-toggle.selected-ativ{border-color:var(--u6);color:var(--u6);background:var(--u6-bg)}
+
+/* Class tabs */
+.class-tabs{margin-top:14px}
+.tab-header{
+  display:flex;gap:4px;margin-bottom:0;
+}
+.tab-btn{
+  padding:6px 14px;border-radius:8px 8px 0 0;
+  border:1px solid var(--border);border-bottom:none;
+  background:var(--surface2);color:var(--text2);
+  cursor:pointer;font-size:12px;font-weight:600;
+  transition:.2s;
+}
+.tab-btn.active{background:var(--must);color:var(--burg-dark);border-color:var(--must)}
+.tab-content{
+  border:1px solid var(--border);border-radius:0 var(--radius-sm) var(--radius-sm) var(--radius-sm);
+  padding:8px;background:var(--surface);
+  display:none;
+}
+.tab-content.active{display:block}
+
+/* Observation textarea */
+.obs-label{
+  font-size:11px;font-weight:700;text-transform:uppercase;
+  color:var(--must-dark);letter-spacing:.5px;
+  margin-top:14px;margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+[data-theme="dark"] .obs-label{color:var(--must)}
+.obs-textarea{
+  width:100%;min-height:68px;resize:vertical;
+  padding:10px 12px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--surface2);color:var(--text);
+  transition:.2s;
+}
+.obs-textarea:focus{
+  outline:none;border-color:var(--must);
+  box-shadow:0 0 0 3px rgba(201,162,39,.2);
+}
+.save-indicator{
+  font-size:11px;color:var(--u6);margin-left:8px;
+  opacity:0;transition:opacity .3s;
+}
+.save-indicator.show{opacity:1}
+
+/* Worksheet link field */
+.link-input{
+  width:100%;padding:7px 12px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--surface2);color:var(--text);
+  font-size:13px;transition:.2s;
+}
+.link-input:focus{outline:none;border-color:var(--must);box-shadow:0 0 0 3px rgba(201,162,39,.2)}
+
+/* Extra / worksheet pills */
+.extra-tag{
+  display:inline-block;padding:2px 10px;border-radius:10px;
+  font-size:11px;font-weight:600;
+  background:var(--must-light);color:var(--burg-dark);
+  margin-right:4px;
+}
+[data-theme="dark"] .extra-tag{background:var(--surface2);color:var(--must)}
+
+/* Stats bar */
+.stats-bar{
+  display:flex;gap:12px;flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.stat-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:10px 16px;
+  text-align:center;flex:1;min-width:90px;
+}
+.stat-num{font-size:22px;font-weight:800;color:var(--burg);line-height:1}
+[data-theme="dark"] .stat-num{color:var(--must)}
+.stat-label{font-size:11px;color:var(--text2);margin-top:3px}
+
+/* ═══════════════════════════════════════════════════════
+   UNIT COLOR THEMES
+═══════════════════════════════════════════════════════ */
+.theme-u5 .card-header{background:var(--u5-bg);border-color:var(--u5)}
+.theme-u5 .card-num{background:var(--u5)}
+.theme-u5 .card-header .card-toggle{color:var(--u5)}
+.theme-u5 .field-label{color:var(--u5)}
+
+.theme-u6 .card-header{background:var(--u6-bg);border-color:var(--u6)}
+.theme-u6 .card-num{background:var(--u6)}
+.theme-u6 .card-header .card-toggle{color:var(--u6)}
+.theme-u6 .field-label{color:var(--u6)}
+
+.theme-sc .card-header{background:var(--sc-bg);border-color:var(--sc)}
+.theme-sc .card-num{background:var(--sc)}
+.theme-sc .card-header .card-toggle{color:var(--sc)}
+.theme-sc .field-label{color:var(--sc)}
+
+.theme-rev .card-header{background:var(--rev-bg);border-color:var(--rev)}
+.theme-rev .card-num{background:var(--rev)}
+.theme-rev .card-header .card-toggle{color:var(--rev)}
+.theme-rev .field-label{color:var(--rev)}
+
+.theme-pv .card-header{background:var(--pv-bg);border-color:var(--pv)}
+.theme-pv .card-num{background:var(--pv)}
+.theme-pv .card-header .card-toggle{color:var(--pv)}
+.theme-pv .field-label{color:var(--pv)}
+
+.theme-ri .card-header{background:var(--ri-bg);border-color:var(--ri)}
+.theme-ri .card-num{background:var(--ri)}
+.theme-ri .card-header .card-toggle{color:var(--ri)}
+.theme-ri .field-label{color:var(--ri)}
+
+/* ═══════════════════════════════════════════════════════
+   PRINT / PDF
+═══════════════════════════════════════════════════════ */
+@media print {
+  #appHeader .filter-bar,
+  #appHeader .hdr-right,
+  .cal-sidebar,
+  .stats-bar,
+  .filter-bar,
+  .tab-header,
+  .link-input,
+  footer { display: none !important; }
+
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .layout { display: block; padding: 0; }
+  .planner-main { width: 100%; }
+
+  .hdr-main { background: #7B1C2E !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 10px 16px; }
+  .hdr-school, .hdr-sub, .hdr-logo { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .section-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-after: avoid; }
+
+  .lesson-card { page-break-inside: avoid; border: 1px solid #ccc !important; box-shadow: none !important; margin-bottom: 14pt; }
+  .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card-num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card-body { display: block !important; }
+  .card-toggle { display: none !important; }
+
+  .tab-content { display: block !important; border: none !important; padding: 0 !important; }
+  .tab-content::before { font-size: 10pt; font-weight: 700; color: #555; }
+  #tab-A-label::before { content: "5ºA: "; }
+
+  .obs-textarea { border: 1px solid #ddd !important; background: #fafafa !important; min-height: 40pt; resize: none; }
+  .obs-label { color: #7B1C2E !important; }
+
+  .eval-row { gap: 4pt; }
+  .eval-toggle { border: 1pt solid #999 !important; padding: 3pt 8pt; font-size: 9pt; }
+  .eval-toggle.selected-none,
+  .eval-toggle.selected-test,
+  .eval-toggle.selected-ativ { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .fields-table td { padding: 5pt 8pt; font-size: 10pt; }
+  .field-label { font-size: 9pt; }
+
+  @page { margin: 2cm 2cm 2cm 3cm; size: A4; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+footer{
+  text-align:center;padding:24px;
+  font-size:12px;color:var(--text2);
+  border-top:1px solid var(--border);
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════════════════ -->
+<header id="appHeader">
+  <div class="hdr-main">
+    <div class="hdr-left">
+      <div class="hdr-logo">LP</div>
+      <div class="hdr-title">
+        <div class="hdr-school">Centro Educacional Linus Pauling</div>
+        <div class="hdr-sub">Planejamento 3º Trimestre — Inglês | 5ºA • 5ºB • 5ºC | Prof.ª Vanessa | 2026</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <button class="btn-pill" id="filterToggle">Filtrar ▾</button>
+      <button class="btn-pill" id="expandAllBtn">⊞ Expandir</button>
+      <button class="btn-pill" id="collapseAllBtn">⊟ Recolher</button>
+      <button class="btn-pill" id="printBtn" title="Imprimir / Salvar como PDF">📄 PDF</button>
+      <button class="btn-pill" id="wordBtn" title="Baixar como Word (.doc)">📝 Word</button>
+      <button class="btn-pill" id="exportBtn" title="Exportar observações salvas">💾 Obs.</button>
+      <button class="btn-icon" id="themeBtn" title="Modo claro/escuro">🌙</button>
+    </div>
+  </div>
+  <div class="filter-bar hidden" id="filterBar">
+    <button class="filter-chip active" data-filter="all">Todos (40)</button>
+    <button class="filter-chip" data-filter="u5">Unit 5 — Oceanos</button>
+    <button class="filter-chip" data-filter="u6">Unit 6 — Esportes</button>
+    <button class="filter-chip" data-filter="sc">🌊 Semana Cultural</button>
+    <button class="filter-chip" data-filter="rev">Review / Final</button>
+    <button class="filter-chip" data-filter="pv">📝 Provas</button>
+    <button class="filter-chip" data-filter="ri">⭐ Revisionais</button>
+  </div>
+</header>
+
+<!-- ═══ LAYOUT ════════════════════════════════════════════════════════════════ -->
+<div class="layout">
+
+  <!-- Calendar sidebar -->
+  <aside class="cal-sidebar" id="calSidebar">
+    <button class="cal-toggle-btn" id="calToggleBtn" onclick="toggleCalSidebar()">
+      📅 Calendário 3º Trimestre <span class="cal-toggle-arrow">▼</span>
+    </button>
+    <div class="cal-sidebar-inner" id="calSidebarInner">
+    <div id="calendarArea"></div>
+    <div class="legend">
+      <div class="legend-title">Legenda</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--u5)"></span>Unit 5 — Help our oceans!</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--u6)"></span>Unit 6 — Let's play together!</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--sc)"></span>Semana Cultural</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--rev)"></span>Review / Goodbye / Celebrations</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--pv)"></span>Prova / Aplicação</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--ri)"></span>Atividade Revisional / Avaliativa</div>
+    </div>
+    </div><!-- end cal-sidebar-inner -->
+  </aside>
+
+  <!-- Main planner -->
+  <main class="planner-main">
+    <!-- Stats -->
+    <div class="stats-bar" id="statsBar">
+      <div class="stat-card"><div class="stat-num">40</div><div class="stat-label">Aulas no trimestre</div></div>
+      <div class="stat-card"><div class="stat-num">13</div><div class="stat-label">Unit 5 — Oceanos</div></div>
+      <div class="stat-card"><div class="stat-num">17</div><div class="stat-label">Unit 6 — Esportes</div></div>
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">🌊 Semana Cultural</div></div>
+      <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">📝 Provas</div></div>
+    </div>
+    <div id="plannerContent"></div>
+  </main>
+</div>
+
+<footer>
+  Centro Educacional Linus Pauling — Professoras Luana & Vanessa — Inglês / 5ºA, 5ºB, 5ºC — 3º Trimestre 2026
+  &nbsp;|&nbsp; Observações salvas automaticamente no navegador
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  LESSON DATA
+// ═══════════════════════════════════════════════════════
+const LESSONS = [
+  // ─ UNIT 5 ─────────────────────────────────────────
+  { id:1,  week:'Week 1', cls:'Class 1', dateKey:'2026-08-31', date:'31/08', day:'Segunda-feira',  section:'u5',
+    warmup:'Greetings e revisão breve do vocabulário estudado anteriormente.',
+    act1:'SB pp. 54–55 — Unit 5 opener: Wonder. Rise and Shine Museum (cena oceânica). Listen, find e nomear 10 animais marinhos. Preview dos objetivos da unit.',
+    act2:'I wonder...: "What is Kids\' Ocean Day?" — discussão em grupo. Explore: Which ocean animal do you think is the most interesting?',
+    wrapup:'Look and say: Which animal do you like most? Why? — compartilhamento rápido.',
+    extra:'Unit 5: Help our oceans! | Contexto: Rise and Shine Museum — ocean exhibit.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:2,  week:'Week 1', cls:'Class 2', dateKey:'2026-09-02', date:'02/09', day:'Quarta-feira',   section:'u5',
+    warmup:'Quick review: nomear animais marinhos da cena do museu (aula anterior).',
+    act1:'SB p. 54 — L1 Vocabulary: ocean animals. Listen and find | Listen, point and say | Listen and say (vocabulary chant). Ask and answer: Which is your favorite sea animal? Why?',
+    act2:'WB p. 40 — Read and number | Think and write (ocean animals). Correção em duplas.',
+    wrapup:'Vocabulary flashcard game: listen and point quickly.',
+    extra:'Vocabulary: shark, crab, jellyfish, dolphin, starfish, octopus, seal, snail, seahorse, whale.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:3,  week:'Week 1', cls:'Class 3', dateKey:'2026-09-03', date:'03/09', day:'Quinta-feira',   section:'u5',
+    warmup:'Vocabulary game: mímica de animal marinho — turma adivinha.',
+    act1:'SB p. 55 — L2 Grammar + Song: Present Continuous (aff. + neg.). Read and sing. Listen and circle T/F. Make sentences about the picture (The shark is swimming.)',
+    act2:'WB p. 41 — Write the words (anagramas) | Write sentences usando Present Continuous.',
+    wrapup:'I can shine!: mímica de animais marinhos com Present Continuous.',
+    extra:'Grammar: Present Continuous (aff + neg) — The shark is swimming. It isn\'t walking. Song: "Ocean animals are sometimes big, seals, sharks and whales!"',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:4,  week:'Week 2', cls:'Class 1', dateKey:'2026-09-09', date:'09/09', day:'Quarta-feira',   section:'u5',
+    warmup:'Quick review: ocean animals + Present Continuous (chain drill).',
+    act1:'SB pp. 56–57 — L3 Story: Museum / Taking care of the oceans. Listen, point and say (6 ações). Listen/watch: How do the children want to help?',
+    act2:'WB p. 42 — Look, think and write | Read the story again. Fill blanks: beaches, poster, trash, Socks.',
+    wrapup:'I can shine!: Imagine — how can you help the oceans? (1 ideia por aluno)',
+    extra:'Vocabulary: clean the oceans, have a beach clean-up, make a movie, pick up trash, recycle trash, tell people. Story value: Taking care of the oceans.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:5,  week:'Week 2', cls:'Class 2', dateKey:'2026-09-10', date:'10/09', day:'Quinta-feira',   section:'u5',
+    warmup:'Quick review: vocabulary of ways to take care of the oceans (chain + mime).',
+    act1:'SB p. 58 — L4 Grammar builder: Present Continuous (questions). Listen and write: What are Zoe and Marco doing? Listen and read, then chant.',
+    act2:'WB p. 43 — Look, think and write | I can shine! (Present Continuous questions). Look, ask and answer em duplas.',
+    wrapup:'Drill rápido: Are they cleaning the beach? Yes, they are. / No, they aren\'t. (4 duplas)',
+    extra:'Grammar: What are they doing? — They\'re picking up trash. Are they cleaning the beach? Yes, they are. / No, they aren\'t.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:6,  week:'Week 3', cls:'Class 1', dateKey:'2026-09-14', date:'14/09', day:'Segunda-feira',  section:'u5',
+    warmup:'Quick oral review das perguntas com Present Continuous.',
+    act1:'SB p. 59 — L5 Communication: Asking for/giving info about events. Listen and write: When is the beach clean-up? / What time does it start? / Where is it?',
+    act2:'WB p. 43 — I can shine!: Our Oceans weekend schedule. Pronunciation: sons \'ea\', \'ee\' (beaches, seahorse, whales).',
+    wrapup:'I can shine!: think of events, ask and answer (6 duplas na sala).',
+    extra:'Language: When is the beach clean-up? — It\'s on Sunday. What time does it start? — It starts at ten o\'clock. Where is it? — It\'s at Sunny Beach.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:7,  week:'Week 3', cls:'Class 2', dateKey:'2026-09-16', date:'16/09', day:'Terça-feira',    section:'u5',
+    warmup:'Quick review das expressões para asking about events.',
+    act1:'SB pp. 60–61 — L6 Global Citizenship: Ben\'s Blog (projetos de limpeza dos oceanos). Listen and read. Circle the best title.',
+    act2:'WB p. 44 — L6 reading activities + There\'s a lot of / There are some. Answer 4 questions about the blog.',
+    wrapup:'Listen: Which event does the man talk about? Kids\' Ocean Day — listen and circle.',
+    extra:'CLIL: Global Citizenship / Educação ambiental. Vocabulary: safe, terrible, dangerous, great. Structures: There\'s a lot of... / There are some...',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:8,  week:'Week 3', cls:'Class 3', dateKey:'2026-09-17', date:'17/09', day:'Quinta-feira',   section:'u5',
+    warmup:'Review: What are the problems in the oceans? (vocabulary de Ben\'s Blog)',
+    act1:'SB p. 61 — L7 Writing Workshop: Poster sobre beach clean-up. Listen, read and write. Ideas generator: listen and match (Luis, Jen, Ben, Ola).',
+    act2:'WB p. 45 — L7 Writing: Read and circle T/F | Make a movie poster (writing task).',
+    wrapup:'Give it a go: plan your poster (Where? Day? Time? Where to meet?). Share with class.',
+    extra:'Writing: poster informativo com Where? When? What time? (Come and help!). Modelo: Sunny Beach Clean-Up.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:9,  week:'Week 4', cls:'Class 1', dateKey:'2026-09-21', date:'21/09', day:'Segunda-feira',  section:'u5',
+    warmup:'Flashcards: ocean animals + ways to help (speed round).',
+    act1:'SB p. 62 — Unit Project Shine (Step 1: Review). Look and write: What are they doing? Ask, answer and guess. How can you help the oceans? (discussão em grupos). Watch model play.',
+    act2:'Grupos planejam o conteúdo da peça: personagens, ações e roteiro básico. Cada membro escolhe seu papel.',
+    wrapup:'Grupos compartilham ideias: What are the characters going to do?',
+    extra:'Project: Our Ocean Play — encenação de peça sobre ajuda aos oceanos. Review: Present Continuous + Unit 5 vocabulary.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:10, week:'Week 4', cls:'Class 2', dateKey:'2026-09-23', date:'23/09', day:'Quarta-feira',   section:'u5',
+    warmup:'Quick review dos roteiros de peça da aula anterior.',
+    act1:'SB p. 63 — Unit Project Shine (Step 2: Create). Write: favorite ocean animals + how to help? Create and role-play the play in groups.',
+    act2:'Time to Shine!: Share your play with the class. Guess what others are doing. Vote: Which play has the most ideas?',
+    wrapup:'Class reflection: What actions can we take to help the oceans? (3 ideias por grupo)',
+    extra:'Time to Shine!: Share play | Guess | Vote. Oral production: role-play em grupos.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:11, week:'Week 4', cls:'Class 3', dateKey:'2026-09-24', date:'24/09', day:'Quinta-feira',   section:'u5',
+    warmup:'Fast review game — Present Continuous sentences sobre ocean animals.',
+    act1:'WB pp. 46–47 — L8 Review Unit 5: crossword | listen and check | ask and answer. L9 Time to shine!: think and write (animals in danger; what can we do?).',
+    act2:'Lapbook project: My beautiful ocean. Find pictures or draw + write: 1. Problems 2. How to help? 3. Why is a clean ocean important?',
+    wrapup:'Share lapbooks: present "My beautiful ocean" to the class (2 sentenças por aluno).',
+    extra:'Review: vocabulary, Present Continuous (all forms), asking about events. Lapbook: "My beautiful ocean".',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:12, week:'Week 5', cls:'Class 1', dateKey:'2026-09-28', date:'28/09', day:'Segunda-feira',  section:'ri',
+    warmup:'Quick oral review: ocean animals + beach clean-up vocabulary.',
+    act1:'⭐ ATIVIDADE REVISIONAL — Unit 5. Atividade impressa: ocean animals | Present Continuous (all forms) | Asking about events | Beach clean-up vocabulary.',
+    act2:'Correção coletiva + discussão das respostas. Prática oral: flashcards, Q&A game (2 times).',
+    wrapup:'Resumo dos conteúdos para a Prova Parcial. Esclarecimento de dúvidas.',
+    extra:'⚠️ Prazo de envio à coordenação: até 11/09/2026. Conteúdo: Unit 5 completa.',
+    worksheet:'Atividade revisional impressa (Regular + Adaptada APAEE) — link:', evalDefault:'none' },
+
+  { id:13, week:'Week 5', cls:'Class 2', dateKey:'2026-09-30', date:'30/09', day:'Quarta-feira',   section:'pv',
+    warmup:'📝 PROVA PARCIAL — 5º anos Matutino. Organizar sala com carteiras individuais.',
+    act1:'Distribuir prova regular e prova adaptada (APAEE). Ler enunciados em voz alta para alunos APAEE.',
+    act2:'Aplicação da prova parcial (tempo: aula completa).',
+    wrapup:'Recolher as provas. Registrar conteúdo no diário de classe.',
+    extra:'⚠️ Envio à coordenação: até 16/09/2026. 5º anos Vespertino: 25/09. Conteúdo: Unit 5 completa.',
+    worksheet:'Prova impressa (Regular + Adaptada APAEE) — link:', evalDefault:'test' },
+
+  // ─ UNIT 6 OPENER ──────────────────────────────────
+  { id:14, week:'Week 6', cls:'Class 1', dateKey:'2026-10-01', date:'01/10', day:'Quinta-feira',   section:'u6',
+    warmup:'Quick warm-up: flashcards de vocabulário oceânico (speed round).',
+    act1:'Devolução e correção coletiva da Prova Parcial — erros mais comuns discutidos.',
+    act2:'SB pp. 64–65 — Unit 6 opener: Rise and Shine Museum — Sports Hall. What can you see? I wonder...: "What kind of sport is sepak takraw?"',
+    wrapup:'Preview: Which of these sports do you want to play? Alunos compartilham opiniões.',
+    extra:'Unit 6: Let\'s play together! Contexto: Rise and Shine Museum — Sports Hall.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:15, week:'Week 6', cls:'Class 2', dateKey:'2026-10-05', date:'05/10', day:'Segunda-feira',  section:'u6',
+    warmup:'Name the sports from the museum scene (aula anterior).',
+    act1:'SB p. 64 — L1 Vocabulary: sports. Listen and find (1–10 no museu). Listen and point, then say. Complete: Play... / Do... / Go... (table em duplas).',
+    act2:'WB p. 48 — Read and number | Complete the table (play/do/go + sports).',
+    wrapup:'Tell your friend: I enjoy playing... / I don\'t like doing... (pair sharing)',
+    extra:'Vocabulary: gymnastics, baseball, basketball, swimming, ping-pong, volleyball, snowboarding, field hockey, track and field, badminton. Verbs: play / do / go.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:16, week:'Week 6', cls:'Class 3', dateKey:'2026-10-07', date:'07/10', day:'Quarta-feira',   section:'u6',
+    warmup:'Quick review: play/do/go + sports (board game ou flashcards).',
+    act1:'SB p. 65 — L2 Grammar + Song: be going to (aff. + neg.). Read and sing. Listen, find and write. Imagine: make sentences (I\'m going to...)',
+    act2:'WB p. 49 — Listen and write G/B | Look, think and write (be going to).',
+    wrapup:'I can shine!: Talk about sports you\'re going to play next week.',
+    extra:'Grammar: be going to (aff + neg) — I\'m going to play ping-pong. I\'m not going to do gymnastics. Song: "Let\'s play sports together!"',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:17, week:'Week 7', cls:'Class 1', dateKey:'2026-10-08', date:'08/10', day:'Quinta-feira',   section:'u6',
+    warmup:'Quick review de be going to com sports vocabulary.',
+    act1:'SB pp. 66–67 — L3 Story: Museum Champions\' Race. Listen, point and say (6 atividades). Think: Which activities will the children do? Listen/watch: Which team wins?',
+    act2:'WB p. 50 — Think and write | Plan a race. Read again: Circle T/F (5 statements).',
+    wrapup:'I can shine!: Imagine the race — who is going to go first/second?',
+    extra:'Vocabulary: jump hurdles, run a race, win a race, hit a ball, throw a ball, bounce a ball. Story value: Teamwork.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:18, week:'Week 7', cls:'Class 2', dateKey:'2026-10-14', date:'14/10', day:'Quarta-feira',   section:'u6',
+    warmup:'Review sports activities vocabulary + discussão sobre teamwork.',
+    act1:'SB p. 68 — L4 Grammar builder: be going to (questions). Listen and write: What sport is Sofia going to play? Listen and read, then chant.',
+    act2:'WB p. 51 — Look, think and write | I can shine! Ask and answer (✓ ou ✗ activities grid).',
+    wrapup:'I can shine!: Are you going to... next week? Ask and answer em duplas (4 trocas).',
+    extra:'Grammar: be going to (questions) — What are you going to do? / Are you going to play ping-pong? Yes, I am. / No, I\'m not.',
+    worksheet:'—', evalDefault:'none' },
+
+  // ─ SEMANA CULTURAL ────────────────────────────────
+  { id:19, week:'Week 8', cls:'Class 1', dateKey:'2026-10-19', date:'19/10', day:'Segunda-feira',  section:'sc',
+    warmup:'Quick review: Unit 5 vocabulary — ocean animals + beach clean-up actions.',
+    act1:'🌊 SEMANA CULTURAL — Save Our Oceans (Etapa 3: Produção). Finalizar cartazes/infográficos em grupos. Temas: 1. Impactos da poluição | 2. Tempo de decomposição | 3. Animais afetados | 4. Ações sustentáveis.',
+    act2:'Prática oral: frases em inglês para a apresentação — "Our topic is... / The main problem is... / We can help by..." Ensaio de cada membro.',
+    wrapup:'Ensaio oral em grupo: cada membro apresenta sua parte (1 min). Quick peer feedback.',
+    extra:'🌊 Evento: Sábado 24/10/2026 | Valor: 5 pts. Grupos: 5ºA = 5 grupos | 5ºB = 6 grupos | 5ºC = 4 grupos.',
+    worksheet:'Rubrica da Semana Cultural — link:', evalDefault:'none' },
+
+  { id:20, week:'Week 8', cls:'Class 2', dateKey:'2026-10-21', date:'21/10', day:'Quarta-feira',   section:'sc',
+    warmup:'Quick vocabulary review: Unit 5 ocean/clean-up vocabulary aplicado ao projeto.',
+    act1:'🌊 Ensaio completo (3–4 min por grupo). Professora observa e dá feedback sobre o uso do inglês e clareza.',
+    act2:'Peer feedback: o que ficou bom? O que melhorar? Orientação final sobre o evento do sábado (24/10).',
+    wrapup:'Cada grupo confirma papéis e responsabilidades para o sábado.',
+    extra:'Foco: fluência oral + uso do inglês. Conexão SB: vocabulário da Unit 5 aplicado no projeto.',
+    worksheet:'Rubrica da Semana Cultural (preenchida após o evento) — link:', evalDefault:'ativ' },
+
+  { id:21, week:'Week 8', cls:'Class 3', dateKey:'2026-10-22', date:'22/10', day:'Quinta-feira',   section:'sc',
+    warmup:'Preparação final: grupos reúnem materiais para a exposição.',
+    act1:'🌊 Organizar espaço de exposição. Praticar receber visitantes em inglês: "Welcome! Our topic is... / Would you like to know about...?"',
+    act2:'Ensaio completo final de cada grupo. Professora dá feedback de última hora.',
+    wrapup:'Revisão da rubrica de avaliação (5 pts) com os alunos. Confirmar detalhes: sábado 24/10.',
+    extra:'📌 Entrega da rubrica preenchida após o evento. Exposição aberta às famílias — Sáb. 24/10/2026.',
+    worksheet:'Rubrica preenchida — link:', evalDefault:'ativ' },
+
+  // ─ UNIT 6 CONTINUAÇÃO ─────────────────────────────
+  { id:22, week:'Week 9', cls:'Class 1', dateKey:'2026-10-26', date:'26/10', day:'Segunda-feira',  section:'u6',
+    warmup:'Quick recap da Semana Cultural e transição para Unit 6 L5.',
+    act1:'SB p. 69 — L5 Communication: Making plans. Listen and read dialogues (Hi! Are you free on Thursday afternoon? / Do you want to do track and field with me?). Listen again and say.',
+    act2:'WB p. 51 — Complete dialogues + ask and answer em duplas. Pronunciation: \'th\' sound — thank, brother, birthday, math.',
+    wrapup:'I can shine!: Plan to play sports with a friend (day, time, activity).',
+    extra:'Language: Hi! Are you free on...? / Do you want to do... with me? / Yes, I am! / No, I\'m not. Sorry! / Great! See you then!',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:23, week:'Week 9', cls:'Class 2', dateKey:'2026-10-28', date:'28/10', day:'Quarta-feira',   section:'u6',
+    warmup:'Quick vocab review: sports + be going to structures (Q&A pair drill).',
+    act1:'SB pp. 70–71 — L6 Global Citizenship: Unusual sports. Listen and read the leaflet (disc golf, kick volleyball, team ping-pong, morning run). Read and circle.',
+    act2:'WB p. 52 — Look and number | advérbios (well, badly, quickly, slowly). Listen: Which sport do Ethan/Ava choose?',
+    wrapup:'Sharing: Would you try any of the unusual sports? Why / Why not?',
+    extra:'CLIL: Unusual sports around the world. Adverbs: well, badly, quickly, slowly.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:24, week:'Week 9', cls:'Class 3', dateKey:'2026-10-29', date:'29/10', day:'Quinta-feira',   section:'u6',
+    warmup:'Quick review de unusual sports + adverbs.',
+    act1:'SB p. 71 — L7 Writing Workshop: Note about an unusual sport. Read and answer 5 questions (Will\'s letter). Plan an unusual water sports event.',
+    act2:'WB p. 53 — L7 Writing: Complete notes (What sport? Why unusual? Day? Time? Where?). Write a message to a friend using be going to.',
+    wrapup:'Check your work: I\'m, It\'s, o\'clock (capitalization and punctuation). Share with a partner.',
+    extra:'Writing: note/message to a friend about an unusual sport. Checklist: I\'m, It\'s, o\'clock.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:25, week:'Week 10', cls:'Class 1', dateKey:'2026-11-04', date:'04/11', day:'Quarta-feira',  section:'u6',
+    warmup:'Review: be going to + sports vocabulary game (Q&A em duplas, 3 min).',
+    act1:'SB p. 72 — Unit Project Shine (Step 1: Review). Look and write sports (8 images). Choose a sport, ask/answer and guess. Make a plan to play together. Discussion: Why is it good to work as a team?',
+    act2:'Begin filling the sports weekend grid (Sat/Sun × Morning/Afternoon/Evening). Watch and listen (model project).',
+    wrapup:'Groups share their sports weekend plan outline: "On Saturday morning, we\'re going to..."',
+    extra:'Project: Our Sports Weekend — plan a sports weekend using be going to.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:26, week:'Week 10', cls:'Class 2', dateKey:'2026-11-05', date:'05/11', day:'Quinta-feira',  section:'u6',
+    warmup:'Grupos revisam e finalizam seus sports weekend plans.',
+    act1:'SB p. 73 — Unit Project Shine (Step 2: Create). Complete the sports weekend table (Sat/Sun × Morning/Afternoon/Evening). Practice presenting.',
+    act2:'Time to Shine!: Present your sports weekend plan to the class. Choose two new sports to try this week.',
+    wrapup:'Class vote: decide which sports to play together.',
+    extra:'Time to Shine!: Present plan | Choose 2 new sports. Oral production using be going to.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:27, week:'Week 11', cls:'Class 1', dateKey:'2026-11-09', date:'09/11', day:'Segunda-feira', section:'u6',
+    warmup:'Fast-paced vocabulary review game: sports + be going to (teams).',
+    act1:'WB pp. 54–55 — L8 Review Unit 6. Think and write (sports 1–6). Look and write (Sat/Sun schedule). Complete dialogue: Are you going to...? / What are you going to do?',
+    act2:'Look at activity 2, think, write, then ask and answer. Pair check.',
+    wrapup:'Class review: What are the 3 main things we learned in Unit 6?',
+    extra:'Review: sports vocabulary • be going to (all forms) • making plans • adverbs. Prep para Atividade Avaliativa (11–12/11).',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:28, week:'Week 11', cls:'Class 2', dateKey:'2026-11-11', date:'11/11', day:'Quarta-feira',  section:'ri',
+    warmup:'⭐ ATIVIDADE AVALIATIVA — Part 1. Brief oral review of key structures.',
+    act1:'Parte escrita (individual): complete sports weekend plan — What are you going to do? When? Where? With whom?',
+    act2:'Parte oral (duplas — grupos A e B): present the sports weekend plan. "On Saturday morning, I\'m going to... I\'m not going to..."',
+    wrapup:'Collect written parts. Confirmar apresentações Part 2 para a próxima aula.',
+    extra:'Format: oral + escrita — Sports Weekend Plan. Valor: 7 pts. Critérios: vocabulário, gramática, fluência oral, coerência.',
+    worksheet:'Rubrica da Atividade Avaliativa — link:', evalDefault:'ativ' },
+
+  { id:29, week:'Week 11', cls:'Class 3', dateKey:'2026-11-12', date:'12/11', day:'Quinta-feira',  section:'ri',
+    warmup:'⭐ ATIVIDADE AVALIATIVA — Part 2. Apresentações continuam (grupos C e D).',
+    act1:'Grupos C e D apresentam seus sports weekend plans (oral + escrita).',
+    act2:'Collective oral feedback: pontos fortes e áreas de melhoria. Written feedback devolvido com comentários.',
+    wrapup:'Self-assessment: How did I do? (rubrica simplificada). Reflexão sobre o aprendizado da Unit 6.',
+    extra:'Conclusão da Atividade Avaliativa. Self-assessment rubric distribuída.',
+    worksheet:'Rubrica da Atividade Avaliativa — link:', evalDefault:'ativ' },
+
+  { id:30, week:'Week 12', cls:'Class 1', dateKey:'2026-11-16', date:'16/11', day:'Segunda-feira', section:'u6',
+    warmup:'Quick recap do vocabulário de esportes da Unit 6.',
+    act1:'WB p. 55 — L9 Time to Shine! — Lapbook: My sports. Think and write: I enjoy... / I\'m good at... / I like watching... / I would like to try...',
+    act2:'Make lapbook: find pictures or draw + write respostas para 4 perguntas sobre esportes.',
+    wrapup:'Share lapbooks: present "My sports" to the class (2–3 sentenças).',
+    extra:'Lapbook: "My sports" — reflexão pessoal usando vocabulário e estruturas da Unit 6.',
+    worksheet:'—', evalDefault:'none' },
+
+  // ─ REVIEW / FINAL ─────────────────────────────────
+  { id:31, week:'Week 12', cls:'Class 2', dateKey:'2026-11-18', date:'18/11', day:'Quarta-feira',  section:'rev',
+    warmup:'Quick vocabulary/grammar recap game (Units 5 and 6 combined).',
+    act1:'SB pp. 74–75 — Review 3 "Our world" (Part 1). Listen: What are the children going to put in the time capsule? Look, ask and answer.',
+    act2:'WB pp. 56–57 — Read and write (was, wasn\'t, were, weren\'t). Read Zoe\'s letter + circle correct answers.',
+    wrapup:'Imagine you\'re at the beach: What are you going to do? How can you help the oceans?',
+    extra:'Review: Present Continuous + be going to + asking about events + sports/ocean vocabulary.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:32, week:'Week 12', cls:'Class 3', dateKey:'2026-11-19', date:'19/11', day:'Quinta-feira',  section:'rev',
+    warmup:'Quick review do conteúdo da Review 3 (aula anterior).',
+    act1:'SB p. 75 — Review 3 (Part 2). Complete sentences. Mini-project: Plan a beach clean-up and some team sports (write em duplas).',
+    act2:'WB p. 57 — Write postcard to a friend about going to the beach. Present mini-project ideas to the class.',
+    wrapup:'Time to shine!: Museum trail card (self-assessment). Celebrate completion of Review 3.',
+    extra:'Integração das Units 5 e 6. Mini-project: beach clean-up + team sports weekend.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:33, week:'Week 13', cls:'Class 1', dateKey:'2026-11-23', date:'23/11', day:'Segunda-feira', section:'rev',
+    warmup:'Listen and say: revisão do vocabulário principal das duas units.',
+    act1:'SB pp. 76–77 — Goodbye from the Rise and Shine Museum. Listen/watch (Goodbye scene). Listen again: Which 5 things do children put in the time capsule?',
+    act2:'WB pp. 58–59 — Goodbye: Think and write | Lapbook: My favorite things. Read and sing the Goodbye song.',
+    wrapup:'I can shine!: Choose 4 things to put in YOUR time capsule. Reflect: What did I learn this year?',
+    extra:'Song: "Goodbye from the Rise and Shine Museum — Exhibits on every floor!" Reflexão sobre o ano.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:34, week:'Week 13', cls:'Class 2', dateKey:'2026-11-25', date:'25/11', day:'Quarta-feira',  section:'rev',
+    warmup:'Quick vocabulary review: museum activities (welcome visitors, tour guide, cafe...).',
+    act1:'SB pp. 78–79 — Celebrations: Museum Takeover Day. Look and write + match + listen and check. Plan your own Museum Takeover Day.',
+    act2:'WB pp. 60–61 — Museum Takeover Day + World Food Day activities. Look and say + listen, point, read, then say.',
+    wrapup:'Discussion: should / shouldn\'t for healthy eating.',
+    extra:'Celebrations vocabulary: welcome visitors, tour guide, museum store, cafe, plan an exhibit. Grammar: should / shouldn\'t.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:35, week:'Week 13', cls:'Class 3', dateKey:'2026-11-26', date:'26/11', day:'Quinta-feira',  section:'rev',
+    warmup:'Review: should / shouldn\'t (healthy eating rules — quick T/F game).',
+    act1:'WB pp. 60–61 — International Day of Forests: Look and check ✓ ou ✗ + think and write (We must / mustn\'t).',
+    act2:'Museum Open Day: Write and match + ask and answer (Would you like to do a tour? / make a castle? / play a game?)',
+    wrapup:'Reflection: What would you like to do at the museum? (Would you like to...?)',
+    extra:'Grammar: must / mustn\'t — protect our forest. Vocabulary: Would you like to...? Celebrations: Int\'l Day of Forests + Museum Open Day.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:36, week:'Week 14', cls:'Class 1', dateKey:'2026-11-30', date:'30/11', day:'Segunda-feira', section:'ri',
+    warmup:'Quick vocabulary review game: Units 5 + 6 flashcards (speed round, 2 teams).',
+    act1:'⭐ ATIVIDADE REVISIONAL — Prova Trimestral. Atividade impressa (Units 5 e 6 + Review 3). Conteúdo: ocean animals, Present Continuous, beach clean-up, be going to, sports, making plans.',
+    act2:'Correção coletiva + discussão dos erros comuns. Quiz game: flashcards, oral quiz, grammar battle.',
+    wrapup:'Roda de dúvidas: Q&A final para a Prova Trimestral (07/12).',
+    extra:'⚠️ Conteúdo da Prova Trimestral: Units 5 e 6 + Review 3 + Goodbye + Celebrations.',
+    worksheet:'Atividade revisional impressa (Regular + Adaptada APAEE) — link:', evalDefault:'none' },
+
+  { id:37, week:'Week 14', cls:'Class 2', dateKey:'2026-12-02', date:'02/12', day:'Quarta-feira',  section:'rev',
+    warmup:'Oral revision: What are they doing? Are you going to...? Quick Q&A pairs.',
+    act1:'Grammar battle (teams): Present Continuous vs. be going to. Quiz de vocabulário: ocean animals + sports.',
+    act2:'Consolidation practice: writing sentences with both grammar structures. Review Goodbye + Celebrations content.',
+    wrapup:'Roda de dúvidas: esclarecimento individual e coletivo.',
+    extra:'Foco: prática oral de gramática + revisão de vocabulário. Prep para Prova Trimestral (07/12).',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:38, week:'Week 14', cls:'Class 3', dateKey:'2026-12-03', date:'03/12', day:'Quinta-feira',  section:'rev',
+    warmup:'Brief "I can..." statements review — Trail Card do SB (Units 5 e 6).',
+    act1:'Self-assessment: Trail Card / I can... statements. Devolução de atividades com comentários da professora.',
+    act2:'Targeted correction de dúvidas individuais. Student-chosen review: Which part was most difficult?',
+    wrapup:'Positive motivation for the exam. What did we learn this trimester? (3 things each student names)',
+    extra:'Metacognição: I can... / I need to practice... Reflexão sobre o trimestre. Prova Trimestral: 07/12.',
+    worksheet:'—', evalDefault:'none' },
+
+  { id:39, week:'Week 15', cls:'Class 1', dateKey:'2026-12-07', date:'07/12', day:'Segunda-feira', section:'pv',
+    warmup:'📝 PROVA TRIMESTRAL — 5º anos. Organizar sala com carteiras individuais.',
+    act1:'Distribuir prova regular e prova adaptada (APAEE). Ler enunciados em voz alta para alunos APAEE.',
+    act2:'Aplicação da Prova Trimestral (tempo: aula completa).',
+    wrapup:'Recolher as provas. Registrar conteúdo no diário de classe.',
+    extra:'Conteúdo: Units 5 e 6 + Review 3 + Goodbye + Celebrations. 📅 Conselho de Classe 3º Trim.: 07/12/2026.',
+    worksheet:'Prova Trimestral impressa (Regular + Adaptada APAEE) — link:', evalDefault:'test' },
+
+  { id:40, week:'Week 15', cls:'Class 2', dateKey:'2026-12-09', date:'09/12', day:'Quarta-feira',  section:'rev',
+    warmup:'🎉 Último dia letivo do 3º Trimestre! Greetings, celebrations, goodbye song.',
+    act1:'Devolução das provas corrigidas. Correção coletiva dos erros mais comuns.',
+    act2:'Reflexão final: What did you learn this year? Celebration: read and sing Goodbye song.',
+    wrapup:'Orientações sobre recuperação final (10–18/12). Mensagem de encerramento da professora.',
+    extra:'🎉 Encerramento do 3º Trimestre. 📅 Recuperação Final: 10–18/12/2026.',
+    worksheet:'—', evalDefault:'none' },
+];
+
+// ═══════════════════════════════════════════════════════
+//  SECTION DEFINITIONS
+// ═══════════════════════════════════════════════════════
+const SECTIONS = [
+  { id:'s1', filter:'u5', color:'#1565C0', bg:'#EBF5FB', textColor:'#fff',
+    icon:'🌊', label:'SETEMBRO', title:'UNIT 5 — Help Our Oceans!',
+    sub:'SB pp. 54–63 / WB pp. 40–47', ids:[1,2,3,4,5,6,7,8,9,10,11,12,13] },
+  { id:'s2', filter:'u6', color:'#2E7D32', bg:'#E8F5E9', textColor:'#fff',
+    icon:'🏅', label:'OUTUBRO', title:'UNIT 6 — Let\'s Play Together! + Semana Cultural',
+    sub:'SB pp. 64–73 / WB pp. 48–55', ids:[14,15,16,17,18,19,20,21] },
+  { id:'s3', filter:'u6', color:'#2E7D32', bg:'#E8F5E9', textColor:'#fff',
+    icon:'⚽', label:'NOVEMBRO', title:'UNIT 6 (continuação) + Atividade Avaliativa',
+    sub:'SB pp. 69–73 / WB pp. 51–55', ids:[22,23,24,25,26,27,28,29,30] },
+  { id:'s4', filter:'rev', color:'#4A148C', bg:'#F3E5F5', textColor:'#fff',
+    icon:'📖', label:'NOV / DEZ', title:'Review 3 • Goodbye • Celebrations • Prova Trimestral',
+    sub:'SB pp. 74–79 / WB pp. 56–61', ids:[31,32,33,34,35,36,37,38,39,40] },
+];
+
+// ═══════════════════════════════════════════════════════
+//  SECTION THEME MAP
+// ═══════════════════════════════════════════════════════
+const SECTION_THEME = {
+  u5:'theme-u5', u6:'theme-u6', sc:'theme-sc',
+  rev:'theme-rev', pv:'theme-pv', ri:'theme-ri'
+};
+const SECTION_COLOR = {
+  u5:'#1565C0', u6:'#2E7D32', sc:'#BF360C',
+  rev:'#4A148C', pv:'#B71C1C', ri:'#E65100'
+};
+const SECTION_BADGE = {
+  none: null,
+  test: {bg:'#B71C1C', text:'#fff', label:'📝 Prova'},
+  ativ: {bg:'#2E7D32', text:'#fff', label:'⭐ Ativ. Avaliativa'},
+};
+const DOT_CLASS = {
+  u5:'dot-u5', u6:'dot-u6', sc:'dot-sc',
+  rev:'dot-rev', pv:'dot-pv', ri:'dot-ri'
+};
+
+// ═══════════════════════════════════════════════════════
+//  STORAGE HELPERS
+// ═══════════════════════════════════════════════════════
+function loadData(key, def) {
+  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : def; }
+  catch(e) { return def; }
+}
+function saveData(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
+}
+
+const STORE_KEY = 'linus_planner_5anos_3trim_2026';
+let store = loadData(STORE_KEY, {});
+function getLesson(id) { return store[id] || {}; }
+function setLesson(id, patch) {
+  store[id] = Object.assign(getLesson(id), patch);
+  saveData(STORE_KEY, store);
+}
+
+// ═══════════════════════════════════════════════════════
+//  CALENDAR RENDER
+// ═══════════════════════════════════════════════════════
+const MONTHS = [
+  {y:2026, m:7,  name:'Agosto 2026'},
+  {y:2026, m:8,  name:'Setembro 2026'},
+  {y:2026, m:9,  name:'Outubro 2026'},
+  {y:2026, m:10, name:'Novembro 2026'},
+  {y:2026, m:11, name:'Dezembro 2026'},
+];
+const DOWS = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+
+// Map dateKey → lesson
+const dateToLesson = {};
+LESSONS.forEach(l => { dateToLesson[l.dateKey] = l; });
+
+function renderCalendars() {
+  const area = document.getElementById('calendarArea');
+  let html = '';
+  MONTHS.forEach(({y, m, name}) => {
+    const firstDay = new Date(y, m, 1).getDay();
+    const daysInMonth = new Date(y, m+1, 0).getDate();
+    html += `<div class="cal-month">
+      <div class="cal-month-name">${name}</div>
+      <div class="cal-grid">`;
+    DOWS.forEach(d => { html += `<div class="cal-dow">${d}</div>`; });
+    for(let i=0; i<firstDay; i++) html += '<div class="cal-day"></div>';
+    for(let d=1; d<=daysInMonth; d++) {
+      const key = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const lesson = dateToLesson[key];
+      if(lesson) {
+        const dc = DOT_CLASS[lesson.section] || 'dot-u5';
+        html += `<div class="cal-day has-lesson" data-key="${key}" onclick="scrollToLesson(${lesson.id})" title="Aula ${lesson.id}: ${lesson.date}">
+          ${d}
+          <div class="cal-dots"><span class="lesson-dot ${dc}"></span></div>
+        </div>`;
+      } else {
+        html += `<div class="cal-day">${d}</div>`;
+      }
+    }
+    html += '</div></div>';
+  });
+  area.innerHTML = html;
+}
+
+function scrollToLesson(id) {
+  const card = document.getElementById(`card-${id}`);
+  if(card) {
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    openCard(id);
+    card.style.outline = '3px solid var(--must)';
+    setTimeout(() => card.style.outline = '', 2000);
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  PLANNER RENDER
+// ═══════════════════════════════════════════════════════
+function renderPlanner() {
+  const container = document.getElementById('plannerContent');
+  let html = '';
+  SECTIONS.forEach(sec => {
+    html += `<div class="section-banner" style="background:${sec.color};color:${sec.textColor}">
+      <span class="section-banner-icon">${sec.icon}</span>
+      <div class="section-banner-text">
+        <div class="section-banner-label">${sec.label}</div>
+        <div class="section-banner-title">${sec.title}</div>
+        <div class="section-banner-sub">${sec.sub}</div>
+      </div>
+      <span class="section-banner-count">${sec.ids.length} aulas</span>
+    </div>`;
+    sec.ids.forEach(id => {
+      const lesson = LESSONS.find(l => l.id === id);
+      if(lesson) html += renderCard(lesson);
+    });
+  });
+  container.innerHTML = html;
+}
+
+function renderCard(lesson) {
+  const saved = getLesson(lesson.id);
+  const evalType = saved.evalType || lesson.evalDefault;
+  const theme = SECTION_THEME[lesson.section] || 'theme-u5';
+  const color = SECTION_COLOR[lesson.section] || '#1565C0';
+  const badge = SECTION_BADGE[evalType];
+  const badgeHtml = badge
+    ? `<span class="card-eval-badge" style="background:${badge.bg};color:${badge.text}">${badge.label}</span>`
+    : '';
+  const obsA = (saved.obsA || '').replace(/"/g, '&quot;');
+  const obsB = (saved.obsB || '').replace(/"/g, '&quot;');
+  const obsC = (saved.obsC || '').replace(/"/g, '&quot;');
+  const obsG = (saved.obsG || '').replace(/"/g, '&quot;');
+  const wsLink = (saved.wsLink || lesson.worksheet).replace(/"/g, '&quot;');
+
+  return `<div class="lesson-card ${theme}" id="card-${lesson.id}" data-section="${lesson.section}">
+    <div class="card-header" id="hdr-${lesson.id}" onclick="toggleCard(${lesson.id})">
+      <span class="card-num">${lesson.id}</span>
+      <div class="card-title">
+        <div class="card-week">${lesson.week} — ${lesson.cls}</div>
+        <div class="card-date">${lesson.date} &nbsp;<span style="font-weight:400;opacity:.7">${lesson.day}</span></div>
+      </div>
+      ${badgeHtml}
+      <span class="card-toggle" style="color:${color}">▼</span>
+    </div>
+    <div class="card-body" id="body-${lesson.id}">
+      <table class="fields-table">
+        <tr><td class="field-label">Routine</td><td class="field-value" style="color:var(--text2);font-style:italic">—</td></tr>
+        <tr><td class="field-label">Warm up:</td><td class="field-value">${lesson.warmup}</td></tr>
+        <tr><td class="field-label">Act. 1:</td><td class="field-value">${lesson.act1}</td></tr>
+        <tr><td class="field-label">Act. 2:</td><td class="field-value">${lesson.act2}</td></tr>
+        <tr><td class="field-label">Wrap-up:</td><td class="field-value">${lesson.wrapup}</td></tr>
+        <tr><td class="field-label">Extra Material:</td><td class="field-value">${lesson.extra}</td></tr>
+        <tr>
+          <td class="field-label">Editable worksheet<br>(add link):</td>
+          <td class="field-value">
+            <input class="link-input" type="text" value="${wsLink}"
+              placeholder="Cole o link aqui..."
+              onchange="saveWs(${lesson.id}, this.value)">
+          </td>
+        </tr>
+        <tr>
+          <td class="field-label">Evaluation:</td>
+          <td class="field-value">
+            <div class="eval-row">
+              <label class="eval-toggle ${evalType==='none'?'selected-none':''}" id="ev-none-${lesson.id}">
+                <input type="radio" name="eval-${lesson.id}" value="none" ${evalType==='none'?'checked':''} onchange="saveEval(${lesson.id},'none')">
+                ✓ None
+              </label>
+              <label class="eval-toggle ${evalType==='test'?'selected-test':''}" id="ev-test-${lesson.id}">
+                <input type="radio" name="eval-${lesson.id}" value="test" ${evalType==='test'?'checked':''} onchange="saveEval(${lesson.id},'test')">
+                📝 Test
+              </label>
+              <label class="eval-toggle ${evalType==='ativ'?'selected-ativ':''}" id="ev-ativ-${lesson.id}">
+                <input type="radio" name="eval-${lesson.id}" value="ativ" ${evalType==='ativ'?'checked':''} onchange="saveEval(${lesson.id},'ativ')">
+                ⭐ Ativ. Avaliativa
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Observations per class -->
+      <div class="class-tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchTab(${lesson.id},'A',this)">5ºA</button>
+          <button class="tab-btn" onclick="switchTab(${lesson.id},'B',this)">5ºB</button>
+          <button class="tab-btn" onclick="switchTab(${lesson.id},'C',this)">5ºC</button>
+        </div>
+        <div class="tab-content active" id="tab-${lesson.id}-A">
+          <div class="obs-label">📝 Observações — 5ºA <span class="save-indicator" id="si-${lesson.id}-A">✔ salvo</span></div>
+          <textarea class="obs-textarea" placeholder="Observações sobre a aula na turma 5ºA..."
+            onchange="saveObs(${lesson.id},'A',this.value)"
+            oninput="indicateSave(${lesson.id},'A')">${obsA}</textarea>
+        </div>
+        <div class="tab-content" id="tab-${lesson.id}-B">
+          <div class="obs-label">📝 Observações — 5ºB <span class="save-indicator" id="si-${lesson.id}-B">✔ salvo</span></div>
+          <textarea class="obs-textarea" placeholder="Observações sobre a aula na turma 5ºB..."
+            onchange="saveObs(${lesson.id},'B',this.value)"
+            oninput="indicateSave(${lesson.id},'B')">${obsB}</textarea>
+        </div>
+        <div class="tab-content" id="tab-${lesson.id}-C">
+          <div class="obs-label">📝 Observações — 5ºC <span class="save-indicator" id="si-${lesson.id}-C">✔ salvo</span></div>
+          <textarea class="obs-textarea" placeholder="Observações sobre a aula na turma 5ºC..."
+            onchange="saveObs(${lesson.id},'C',this.value)"
+            oninput="indicateSave(${lesson.id},'C')">${obsC}</textarea>
+        </div>
+      </div>
+
+      <!-- General observations -->
+      <div class="obs-label" style="margin-top:12px">💡 Observações Gerais / Materiais Extras <span class="save-indicator" id="si-${lesson.id}-G">✔ salvo</span></div>
+      <textarea class="obs-textarea" placeholder="Materiais extras, adaptações APAEE, lembretes..."
+        onchange="saveObs(${lesson.id},'G',this.value)"
+        oninput="indicateSave(${lesson.id},'G')">${obsG}</textarea>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════
+//  INTERACTIVITY
+// ═══════════════════════════════════════════════════════
+function toggleCard(id) {
+  const hdr = document.getElementById(`hdr-${id}`);
+  const body = document.getElementById(`body-${id}`);
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function openCard(id) {
+  const hdr = document.getElementById(`hdr-${id}`);
+  const body = document.getElementById(`body-${id}`);
+  hdr.classList.add('open');
+  body.classList.add('open');
+}
+
+function switchTab(id, cls, btn) {
+  ['A','B','C'].forEach(c => {
+    document.getElementById(`tab-${id}-${c}`).classList.remove('active');
+  });
+  btn.closest('.class-tabs').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`tab-${id}-${cls}`).classList.add('active');
+  btn.classList.add('active');
+}
+
+function saveEval(id, val) {
+  setLesson(id, {evalType: val});
+  ['none','test','ativ'].forEach(v => {
+    const el = document.getElementById(`ev-${v}-${id}`);
+    if(el) {
+      el.classList.remove('selected-none','selected-test','selected-ativ');
+      if(v===val) el.classList.add(`selected-${v}`);
+    }
+  });
+}
+
+let saveTimers = {};
+function saveObs(id, cls, val) {
+  const patch = {};
+  patch[`obs${cls}`] = val;
+  setLesson(id, patch);
+  const si = document.getElementById(`si-${id}-${cls}`);
+  if(si) { si.classList.add('show'); setTimeout(()=>si.classList.remove('show'), 1500); }
+}
+function indicateSave(id, cls) {
+  clearTimeout(saveTimers[`${id}-${cls}`]);
+  saveTimers[`${id}-${cls}`] = setTimeout(() => {
+    const ta = event.target;
+    saveObs(id, cls, ta.value);
+  }, 800);
+}
+
+function saveWs(id, val) {
+  setLesson(id, {wsLink: val});
+}
+
+// Filter
+let currentFilter = 'all';
+function applyFilter(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.lesson-card').forEach(card => {
+    const sec = card.dataset.section;
+    const show = filter === 'all' || sec === filter;
+    card.classList.toggle('filtered-out', !show);
+  });
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.classList.toggle('active', chip.dataset.filter === filter);
+  });
+}
+
+// Theme
+function setTheme(dark) {
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  document.getElementById('themeBtn').textContent = dark ? '☀️' : '🌙';
+  saveData('linus_theme', dark ? 'dark' : 'light');
+}
+
+// Init
+function toggleCalSidebar() {
+  const inner = document.getElementById('calSidebarInner');
+  const btn = document.getElementById('calToggleBtn');
+  inner.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+function initCalSidebar() {
+  const inner = document.getElementById('calSidebarInner');
+  const btn = document.getElementById('calToggleBtn');
+  if(window.innerWidth > 900) {
+    // Desktop: always open, hide toggle button
+    inner.classList.add('open');
+    btn.style.display = 'none';
+    inner.style.display = 'block';
+  } else {
+    // Mobile: collapsed by default
+    inner.classList.remove('open');
+    btn.style.display = 'flex';
+  }
+}
+
+function init() {
+  renderCalendars();
+  renderPlanner();
+  initCalSidebar();
+  window.addEventListener('resize', initCalSidebar);
+
+  // Theme
+  const savedTheme = loadData('linus_theme', 'light');
+  setTheme(savedTheme === 'dark');
+  document.getElementById('themeBtn').onclick = () => {
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    setTheme(!isDark);
+  };
+
+  // Filter toggle
+  document.getElementById('filterToggle').onclick = () => {
+    document.getElementById('filterBar').classList.toggle('hidden');
+  };
+
+  // Filter chips
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.onclick = () => applyFilter(chip.dataset.filter);
+  });
+
+  // PDF / Print
+  document.getElementById('printBtn').onclick = () => {
+    // Expand all cards before printing
+    LESSONS.forEach(l => openCard(l.id));
+    // Show all tabs content for print
+    document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'block');
+    setTimeout(() => {
+      window.print();
+      // Restore after print
+      setTimeout(() => {
+        document.querySelectorAll('.tab-content').forEach(t => t.style.display = '');
+        // Re-apply active tab visibility
+        document.querySelectorAll('.class-tabs').forEach(tabs => {
+          const active = tabs.querySelector('.tab-content.active');
+          tabs.querySelectorAll('.tab-content').forEach(tc => {
+            if (!tc.classList.contains('active')) tc.style.display = 'none';
+          });
+        });
+      }, 500);
+    }, 300);
+  };
+
+  // Word export
+  document.getElementById('wordBtn').onclick = () => {
+    const SEC_COLOR = {u5:'#1565C0',u6:'#2E7D32',sc:'#BF360C',rev:'#4A148C',pv:'#B71C1C',ri:'#E65100'};
+    const SEC_LABEL = {u5:'Unit 5 — Help Our Oceans!',u6:'Unit 6 — Let\'s Play Together!',sc:'🌊 Semana Cultural',rev:'Review / Final',pv:'📝 Prova',ri:'⭐ Atividade Revisional/Avaliativa'};
+    const EVAL_LABEL = {none:'—',test:'📝 Prova / Test',ativ:'⭐ Atividade Avaliativa'};
+
+    let rows = '';
+    let lastSection = null;
+    LESSONS.forEach(l => {
+      const saved = getLesson(l.id);
+      const evalType = saved.evalType || l.evalDefault;
+      const wsLink = saved.wsLink || l.worksheet;
+      const obsA = saved.obsA || '—';
+      const obsB = saved.obsB || '—';
+      const obsC = saved.obsC || '—';
+      const obsG = saved.obsG || '—';
+      const color = SEC_COLOR[l.section] || '#333';
+
+      if (l.section !== lastSection) {
+        lastSection = l.section;
+        rows += `<tr><td colspan="2" style="background:${color};color:#fff;font-size:13pt;font-weight:bold;padding:10px 14px;text-align:center;mso-pattern:${color} none;">${SEC_LABEL[l.section] || l.section}</td></tr>`;
+      }
+
+      rows += `
+        <tr style="page-break-inside:avoid">
+          <td colspan="2" style="background:${color};color:#fff;font-weight:bold;padding:7px 12px;mso-pattern:${color} none;">
+            Aula ${l.id} &nbsp;|&nbsp; ${l.date} — ${l.day} &nbsp;|&nbsp; ${l.week} — ${l.cls}
+          </td>
+        </tr>
+        <tr><td style="width:25%;font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Warm up:</td><td style="padding:5px 10px;border:1px solid #ddd">${l.warmup}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Atividade 1:</td><td style="padding:5px 10px;border:1px solid #ddd">${l.act1}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Atividade 2:</td><td style="padding:5px 10px;border:1px solid #ddd">${l.act2}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Wrap-up:</td><td style="padding:5px 10px;border:1px solid #ddd">${l.wrapup}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Extra / Material:</td><td style="padding:5px 10px;border:1px solid #ddd">${l.extra}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Worksheet:</td><td style="padding:5px 10px;border:1px solid #ddd">${wsLink}</td></tr>
+        <tr><td style="font-weight:bold;color:${color};padding:5px 10px;border:1px solid #ddd;vertical-align:top">Avaliação:</td><td style="padding:5px 10px;border:1px solid #ddd">${EVAL_LABEL[evalType]||evalType}</td></tr>
+        <tr><td style="font-weight:bold;color:#555;padding:5px 10px;border:1px solid #ddd;vertical-align:top">Obs. 5ºA:</td><td style="padding:5px 10px;border:1px solid #ddd">${obsA}</td></tr>
+        <tr><td style="font-weight:bold;color:#555;padding:5px 10px;border:1px solid #ddd;vertical-align:top">Obs. 5ºB:</td><td style="padding:5px 10px;border:1px solid #ddd">${obsB}</td></tr>
+        <tr><td style="font-weight:bold;color:#555;padding:5px 10px;border:1px solid #ddd;vertical-align:top">Obs. 5ºC:</td><td style="padding:5px 10px;border:1px solid #ddd">${obsC}</td></tr>
+        <tr><td style="font-weight:bold;color:#555;padding:5px 10px;border:1px solid #ddd;vertical-align:top">Obs. Gerais:</td><td style="padding:5px 10px;border:1px solid #ddd">${obsG}</td></tr>
+        <tr><td colspan="2" style="padding:4px">&nbsp;</td></tr>`;
+    });
+
+    const docHtml = `
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<!--[if gte mso 9]>
+<xml><w:WordDocument><w:View>Normal</w:View><w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/></w:WordDocument></xml>
+<![endif]-->
+<style>
+  @page { margin: 3cm 2cm 2cm 3cm; mso-page-orientation: portrait; }
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 6pt; }
+  td { font-size: 10pt; }
+  h1 { font-size: 16pt; color: #7B1C2E; text-align: center; }
+  h2 { font-size: 12pt; color: #555; text-align: center; margin-top: 0; }
+  .school-header { text-align: center; margin-bottom: 20pt; }
+</style>
+</head>
+<body>
+<div class="school-header">
+  <h1>CENTRO EDUCACIONAL LINUS PAULING</h1>
+  <h2>Planejamento 3º Trimestre — Inglês | 5ºA • 5ºB • 5ºC | Prof.ª Vanessa | 2026</h2>
+  <p style="font-size:9pt;color:#888">Gerado em: ${new Date().toLocaleString('pt-BR')}</p>
+</div>
+<table>${rows}</table>
+</body></html>`;
+
+    const blob = new Blob([docHtml], {type: 'application/msword;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Planejamento_3Trim_5anos_' + new Date().toISOString().slice(0,10) + '.doc';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Export observations as TXT
+  document.getElementById('exportBtn').onclick = () => {
+    let txt = 'PLANEJAMENTO 3º TRIMESTRE — INGLÊS | 5º ANOS | 2026\n';
+    txt += 'Centro Educacional Linus Pauling — Prof.ª Vanessa\n';
+    txt += 'Exportado em: ' + new Date().toLocaleString('pt-BR') + '\n';
+    txt += '═'.repeat(60) + '\n\n';
+
+    let hasAny = false;
+    LESSONS.forEach(l => {
+      const saved = getLesson(l.id);
+      const hasContent = saved.obsA || saved.obsB || saved.obsC || saved.obsG || saved.wsLink || (saved.evalType && saved.evalType !== l.evalDefault);
+      if (!hasContent) return;
+      hasAny = true;
+      txt += `AULA ${l.id} — ${l.date} (${l.day}) | ${l.week}\n`;
+      if (saved.evalType && saved.evalType !== l.evalDefault) txt += `  Avaliação: ${saved.evalType}\n`;
+      if (saved.wsLink) txt += `  Link worksheet: ${saved.wsLink}\n`;
+      if (saved.obsA) txt += `  5ºA: ${saved.obsA}\n`;
+      if (saved.obsB) txt += `  5ºB: ${saved.obsB}\n`;
+      if (saved.obsC) txt += `  5ºC: ${saved.obsC}\n`;
+      if (saved.obsG) txt += `  Geral: ${saved.obsG}\n`;
+      txt += '\n';
+    });
+
+    if (!hasAny) {
+      txt += '(Nenhuma observação salva ainda.)\n';
+    }
+
+    const blob = new Blob([txt], {type: 'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Observacoes_3Trim_5anos_' + new Date().toISOString().slice(0,10) + '.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Expand/collapse all
+  document.getElementById('expandAllBtn').onclick = () => {
+    LESSONS.forEach(l => openCard(l.id));
+  };
+  document.getElementById('collapseAllBtn').onclick = () => {
+    LESSONS.forEach(l => {
+      document.getElementById(`hdr-${l.id}`)?.classList.remove('open');
+      document.getElementById(`body-${l.id}`)?.classList.remove('open');
+    });
+  };
+}
+
+init();
+</script>
+</body>
+</html>
